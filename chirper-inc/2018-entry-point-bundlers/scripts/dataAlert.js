@@ -1,0 +1,1 @@
+require(['alertMessages'], function(){alert(dataAgreement)});
