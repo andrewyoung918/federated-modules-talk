@@ -941,7 +941,7 @@ if (true) {
 
 var moduleMap = {
 	"./Counter": () => {
-		return Promise.all([__webpack_require__.e(981), __webpack_require__.e(123)]).then(() => (() => ((__webpack_require__(123)))));
+		return Promise.all([__webpack_require__.e(280), __webpack_require__.e(123)]).then(() => (() => ((__webpack_require__(123)))));
 	}
 };
 var get = (module, getScope) => {
@@ -973,10 +973,10 @@ __webpack_require__.d(exports, {
 
 /***/ }),
 
-/***/ 558:
+/***/ 231:
 /***/ ((module) => {
 
-module.exports = chirper@http://localhost:3006/moduleEntry.js;
+module.exports = chirper@https://obscure-funicular-7wx6jpxvw6cw5vp-3006.app.github.dev:3006/moduleEntry.js;
 
 /***/ })
 
@@ -1173,7 +1173,7 @@ module.exports = chirper@http://localhost:3006/moduleEntry.js;
 /******/ 			"129": [
 /******/ 				"default",
 /******/ 				"./Button",
-/******/ 				558
+/******/ 				231
 /******/ 			]
 /******/ 		};
 /******/ 		__webpack_require__.f.remotes = (chunkId, promises) => {
@@ -1267,7 +1267,7 @@ module.exports = chirper@http://localhost:3006/moduleEntry.js;
 /******/ 					register("react-spinners", "0.13.8", () => (Promise.all([__webpack_require__.e(452), __webpack_require__.e(873)]).then(() => (() => (__webpack_require__(452))))));
 /******/ 					register("react", "16.14.0", () => (() => (__webpack_require__(378))), 1);
 /******/ 					register("react", "17.0.0", () => (() => (__webpack_require__(294))), 1);
-/******/ 					initExternal(558);
+/******/ 					initExternal(231);
 /******/ 				}
 /******/ 				break;
 /******/ 			}
@@ -1420,8 +1420,8 @@ module.exports = chirper@http://localhost:3006/moduleEntry.js;
 /******/ 			662: () => (loadSingletonVersionCheckFallback("default", "react-dom", [1,17,0,2], () => (() => (__webpack_require__(542))))),
 /******/ 			873: () => (loadSingletonVersionCheckFallback("default", "react", [,[1,18,0,0],[1,17,0,0],[1,16,0,0],1,1], () => (() => (__webpack_require__(378))))),
 /******/ 			375: () => (loadSingletonVersionCheckFallback("default", "react", [1,17,0,0], () => (() => (__webpack_require__(294))))),
-/******/ 			847: () => (loadStrictVersionCheckFallback("default", "react-redux", [1,7,2,0], () => (Promise.all([__webpack_require__.e(716), __webpack_require__.e(786)]).then(() => (() => (__webpack_require__(716))))))),
 /******/ 			780: () => (loadStrictVersionCheckFallback("default", "@reduxjs/toolkit", [1,1,9,5], () => (__webpack_require__.e(202).then(() => (() => (__webpack_require__(202))))))),
+/******/ 			847: () => (loadStrictVersionCheckFallback("default", "react-redux", [1,7,2,0], () => (Promise.all([__webpack_require__.e(716), __webpack_require__.e(786)]).then(() => (() => (__webpack_require__(716))))))),
 /******/ 			849: () => (loadSingletonVersionCheckFallback("default", "react", [1,16,14,0], () => (() => (__webpack_require__(378))))),
 /******/ 			380: () => (loadSingletonVersionCheckFallback("default", "react", [4,17,0,0], () => (() => (__webpack_require__(294)))))
 /******/ 		};
@@ -1437,8 +1437,10 @@ module.exports = chirper@http://localhost:3006/moduleEntry.js;
 /******/ 			}
 /******/ 		});
 /******/ 		var chunkMapping = {
-/******/ 			"123": [
-/******/ 				780
+/******/ 			"280": [
+/******/ 				375,
+/******/ 				780,
+/******/ 				847
 /******/ 			],
 /******/ 			"786": [
 /******/ 				528,
@@ -1446,10 +1448,6 @@ module.exports = chirper@http://localhost:3006/moduleEntry.js;
 /******/ 			],
 /******/ 			"873": [
 /******/ 				873
-/******/ 			],
-/******/ 			"981": [
-/******/ 				375,
-/******/ 				847
 /******/ 			]
 /******/ 		};
 /******/ 		__webpack_require__.f.consumes = (chunkId, promises) => {
@@ -1501,7 +1499,7 @@ module.exports = chirper@http://localhost:3006/moduleEntry.js;
 /******/ 					if(installedChunkData) {
 /******/ 						promises.push(installedChunkData[2]);
 /******/ 					} else {
-/******/ 						if(!/^(129|786|873|981)$/.test(chunkId)) {
+/******/ 						if(!/^(129|280|786|873)$/.test(chunkId)) {
 /******/ 							// setup Promise in chunk cache
 /******/ 							var promise = new Promise((resolve, reject) => (installedChunkData = installedChunks[chunkId] = [resolve, reject]));
 /******/ 							promises.push(installedChunkData[2] = promise);

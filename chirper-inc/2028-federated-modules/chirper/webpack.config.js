@@ -19,9 +19,9 @@ module.exports = {
     historyApiFallback: true,
   },
   output: {
-    publicPath: 'http://localhost:3006/',
+    publicPath: 'http://obscure-funicular-7wx6jpxvw6cw5vp-3006.app.github.dev:3006/chirper/',
+    path: '/workspaces/federated-modules-talk/dist/chirper',
   },
-
   resolve: {
     extensions: ['.jsx', '.js', '.json'],
   },
@@ -49,8 +49,8 @@ module.exports = {
       },
 
       remotes: {
-        count: `count@http://localhost:3005/moduleEntry.js`,
-        chirper: `chirper@http://localhost:3006/moduleEntry.js`,
+        count: `count@http://obscure-funicular-7wx6jpxvw6cw5vp-3006.app.github.dev:3006/remoteEntry.js`,
+        chirper: `chirper@http://obscure-funicular-7wx6jpxvw6cw5vp-3006.app.github.dev:3006/remoteEntry.js`,
       },
       filename: 'remoteEntry.js',
       shared: {

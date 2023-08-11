@@ -14,7 +14,8 @@ module.exports = {
   },
 
   output: {
-    publicPath: 'http://localhost:3005/',
+    publicPath: 'http://obscure-funicular-7wx6jpxvw6cw5vp-3006.app.github.dev:3006/count/',
+    path: '/workspaces/federated-modules-talk/dist/count',
   },
 
 
@@ -48,7 +49,7 @@ module.exports = {
         './Counter': './src/Counter',
       },
       remotes: {
-        chirper: `chirper@http://localhost:3006/moduleEntry.js`,
+        chirper: `chirper@http://obscure-funicular-7wx6jpxvw6cw5vp-3006.app.github.dev:3006/count/remoteEntry.js`,
       },
       shared: {
         ...deps,

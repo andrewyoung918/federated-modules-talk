@@ -429,7 +429,7 @@ if (true) {
 /***/ 463:
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-Promise.all(/* import() */[__webpack_require__.e(981), __webpack_require__.e(453)]).then(__webpack_require__.bind(__webpack_require__, 453));
+Promise.all(/* import() */[__webpack_require__.e(280), __webpack_require__.e(453)]).then(__webpack_require__.bind(__webpack_require__, 453));
 
 /***/ }),
 
@@ -1350,6 +1350,7 @@ if (true) {
 /******/ 		var installedModules = {};
 /******/ 		var moduleToHandlerMapping = {
 /******/ 			375: () => (loadSingletonVersionCheckFallback("default", "react", [1,17,0,0], () => (() => (__webpack_require__(294))))),
+/******/ 			780: () => (loadStrictVersionCheckFallback("default", "@reduxjs/toolkit", [1,1,9,5], () => (__webpack_require__.e(202).then(() => (() => (__webpack_require__(202))))))),
 /******/ 			847: () => (loadStrictVersionCheckFallback("default", "react-redux", [1,7,2,0], () => (Promise.all([__webpack_require__.e(716), __webpack_require__.e(786)]).then(() => (() => (__webpack_require__(716))))))),
 /******/ 			99: () => (loadSingletonVersionCheckFallback("default", "react-dom", [1,17,0,0], () => (() => (__webpack_require__(935))))),
 /******/ 			264: () => (loadStrictVersionCheckFallback("default", "react-spinners", [2,0,13,8], () => (Promise.all([__webpack_require__.e(452), __webpack_require__.e(873)]).then(() => (() => (__webpack_require__(452))))))),
@@ -1371,6 +1372,11 @@ if (true) {
 /******/ 			}
 /******/ 		});
 /******/ 		var chunkMapping = {
+/******/ 			"280": [
+/******/ 				375,
+/******/ 				780,
+/******/ 				847
+/******/ 			],
 /******/ 			"453": [
 /******/ 				99,
 /******/ 				264
@@ -1381,10 +1387,6 @@ if (true) {
 /******/ 			],
 /******/ 			"873": [
 /******/ 				873
-/******/ 			],
-/******/ 			"981": [
-/******/ 				375,
-/******/ 				847
 /******/ 			]
 /******/ 		};
 /******/ 		__webpack_require__.f.consumes = (chunkId, promises) => {
@@ -1436,7 +1438,7 @@ if (true) {
 /******/ 					if(installedChunkData) {
 /******/ 						promises.push(installedChunkData[2]);
 /******/ 					} else {
-/******/ 						if(!/^(786|873|981)$/.test(chunkId)) {
+/******/ 						if(!/^(280|786|873)$/.test(chunkId)) {
 /******/ 							// setup Promise in chunk cache
 /******/ 							var promise = new Promise((resolve, reject) => (installedChunkData = installedChunks[chunkId] = [resolve, reject]));
 /******/ 							promises.push(installedChunkData[2] = promise);
