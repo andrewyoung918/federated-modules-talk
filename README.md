@@ -185,5 +185,16 @@ While no longer suffering from request bloating, putting the entire contents of 
 
 ### [2018 - Webpack Tree Shacking]
 
+Webpack is introduced as a way of not needing load every part of every library.
+By creating dependency graphs, the bundle can be produced for each page as its own entry point with only the assets that will be used for that page included in the bundle.
+
 ### [2023 - Single Page Web Apps](./chirper-inc/2023-single-page-app/Readme.md)
+
+Hard page loads have been a terribel user experience since the begninning, as the rest of the user experience became more streamlined, pages began to adopt the Single Page Web App model, Which means all users load the same html page with the same initial js bundle and the app handles in page navigation, fetching data and selecting new components internally without page changes
+
+Not wanting to go back to the single giant bundle, new strategies for dynamically loading the chuncks of code needed were introduced by.
+
 ### [2028 - Federated Modules](./chirper-inc/2028-federated-modules/Readme.md)
+
+This talk is about federated modules, I will come back and fill in the story, but follow the talk for the content here now
+
