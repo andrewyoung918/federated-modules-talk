@@ -1,0 +1,21 @@
+{
+  "name": "federal-chirp",
+  "private": true,
+  "workspaces": [
+    "./chirper",
+    "./count-that"
+  ],
+  "version": "0.0.0",
+  "scripts": {
+    "start": "concurrently \"lerna run --scope=redux-reducer-injection_app* --parallel start\" \"yarn serve\"",
+    "build": "lerna run --scope=2028-federated-modules* build",
+    "serve": "lerna run --scope=/chirper-inc/2028-federated-modules* --parallel serve",
+    "clean": "lerna run --scope=chirper-inc/2028-federated-modules* --parallel clean",
+    "e2e:ci": "yarn start & wait-on http-get://localhost:3001/ && npx cypress run --config-file ../cypress/config/cypress.config.ts --config '{\"supportFile\": \"../cypress/support/e2e.ts\"}' --spec \"./e2e/*.cy.ts\" --browser=chrome"
+  },
+  "devDependencies": {
+    "concurrently": "7.6.0",
+    "lerna": "3.22.1",
+    "wait-on": "7.0.1"
+  }
+}

@@ -5,12 +5,12 @@ const buttonStyle = {
   backgroundColor: 'aqua',
 };
 
-const Button = ({ label, handleClick }) => (
+const Button = ({ label, click, children }) => (
   <button
     style={buttonStyle}
-    onClick={handleClick}
+    onPress={click}
   >
-    {label}
+    {label || children}
   </button>
 );
 

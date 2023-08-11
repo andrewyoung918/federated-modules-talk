@@ -1,6 +1,6 @@
 import React from "react";
 import "./Free.css";
-import { Card, Form } from 'react-bootstrap';
+import { Panel, Form } from 'react-bootstrap';
 import Button from '../components/Button'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -23,18 +23,15 @@ function FormChirp({ addChirp }) {
   const handleSubmit = e => {
     e.preventDefault();
     if (!value) return;
-    addChirp(value);
+    addChirp({text:value});
     setValue("");
   };
 
   return (
-    <Form onSubmit={handleSubmit}> 
-    <Form.Group>
-      <Form.Label><b>Add Chirp</b></Form.Label>
-      <Form.Control type="text" className="input" value={value} onChange={e => setValue(e.target.value)} placeholder="Add new chirp" />
-    </Form.Group>
-    <Button handleClick={handleSubmit}>
-  </Form>
+    <div>
+    <input onChange={(e)=>setValue(e.target.value)} />
+    <Button click={handleSubmit}>Send Chirp</Button>
+  </div>
   );
 }
 
@@ -57,22 +54,20 @@ function FreeChirp() {
   };
 
   return (
-    <div className="app">
+    <div className="chirper">
       <div className="container">
         <h1 className="text-center mb-4">Chirp List</h1>
         <FormChirp addChirp={addChirp} />
         <div>
           {chirps.map((chirp, index) => (
-            <Card>
-              <Card.Body>
+            <Panel>
                 <Chirp
                 key={index}
                 index={index}
                 chirp={chirp}
                 removeChirp={removeChirp}
                 />
-              </Card.Body>
-            </Card>
+            </Panel>
           ))}
         </div>
       </div>

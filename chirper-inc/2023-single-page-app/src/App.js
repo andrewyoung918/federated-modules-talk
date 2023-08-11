@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import {MoonLoader} from 'react-spinners';
 
 const Classic = React.lazy(() => import('./pages/ClassicChirper'));
@@ -7,11 +7,13 @@ const Free = React.lazy(() => import('./pages/FreeChirp'));
 
 const App = () => {
   return (
-    <>
-      <header>
+    <BrowserRouter>
+    <div>
+      <div>
         <Link to="/">Classic</Link>
-        <Link to="free">FreeChirp</Link>
-      </header>
+        <Link to="/free">Free Chirp</Link>
+      </div>
+
       <Routes>
         <Route
           index
@@ -30,7 +32,8 @@ const App = () => {
           }
         />
       </Routes>
-    </>
+    </div>
+    </BrowserRouter>
   );
 };
 export default App;
